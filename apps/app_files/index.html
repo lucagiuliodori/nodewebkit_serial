@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" class="js">
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="canonical" href="./files/index.html">
+		<title>Serial RTX</title>
+		<meta name="author" content="Seav s.r.l. - www.seav.it">
+		<meta name="copyright" content="(c) Seav s.r.l.">
+		<!-- Javascript -->
+		<script type="text/javascript" src="./files/main.js"></script>
+		<script type="text/javascript" src="./files/serialprotocol.js"></script>
+	</head>
+	<body onload="javascript:init()">
+		<div id="commandPort">
+			<h1>Serial Ports</h1>
+			<select id="serialPortsList">
+			</select>
+			<input id="bttRefresh" type="button" value="Refresh" onclick="javascript:refreshPortsList();"></input>
+			<input id="bttConnect" type="button" value="Connect" onclick="javascript:conDisSelectedPort();"></input>
+		</div>
+		</br>
+		<div id="textData">
+			<h1>Data TX</h1>
+			<textarea id="textTx" rows="4" cols="50" disabled onkeypress="javascript:textTxKeyPress(event)"></textarea>
+			<input id="bttClrtextTx" type="button" value="Clear Data TX" onclick="javascript:clearDataTx();"></input>
+			<h1>Data RX</h1>
+			<textarea id="textRx" rows="4" cols="50" readonly disabled></textarea>
+			<input id="bttClrtextRx" type="button" value="Clear Data RX" onclick="javascript:clearDataRx();"></input>
+		</div>
+	</body>
+</html>
